@@ -5,10 +5,10 @@ my_group = {'Jill':{'Age':26,'Job':'biologist','Relationship':{'Zalika':'friend'
 'John':{'Age':27,'Job':'writer','Relationship':{'Jill':'partner'}},
 'Nash':{'Age':34,'Job':'chef','Relationship':{'John':'cousin','Zalika':'landlord'}}}
 
-my_group = []
+
 #write something to page
 with open('my_group.json', 'w') as f:
-    json.dump(group, f, indent=4)
+    json.dump(my_group, f, indent=4)
 
 
 # read file and load
