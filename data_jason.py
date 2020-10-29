@@ -5,21 +5,20 @@ my_group = {'Jill':{'Age':26,'Job':'biologist','Relationship':{'Zalika':'friend'
 'John':{'Age':27,'Job':'writer','Relationship':{'Jill':'partner'}},
 'Nash':{'Age':34,'Job':'chef','Relationship':{'John':'cousin','Zalika':'landlord'}}}
 
-json.dumps(my_group)
-print(my_group.items())
-print(json.dumps(my_group, indent=4))
+my_group = []
+#write something to page
+with open('my_group.json', 'w') as f:
+    json.dump(group, f, indent=4)
 
 
+# read file and load
 with open('my_group.json', 'r') as json_file:
-    print(json.dump(my_group, json_file, indent=4))
+    my_group = json_file.read()
 
-#Loading data
-with open('my_group.json', 'r') as json_file:
-    my_group_as_string = json_file.read()
-    print(my_group_as_string)
+mydata = json.loads(my_group)
 
-    mygroup = json.loads(my_group_as_string)
-    print(mygroup)
+print(my_group)
+print(mydata)
 
 
  
